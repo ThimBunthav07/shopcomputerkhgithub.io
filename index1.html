@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replicated Design</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Styling for visual accuracy */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Curved Pill Top Nav Bar Container */
+    .nav-container {
+      background-color: #dcdcdc;
+      border: 1px solid #9e9e9e;
+      border-radius: 9999px;
+    }
+
+    /* Circular Logo Indicator */
+    .logo-circle {
+      width: 52px;
+      height: 52px;
+      background-color: #dcdcdc;
+      border: 1px solid #9e9e9e;
+      border-radius: 50%;
+    }
+
+    /* Navigation Links */
+    .nav-link {
+      color: #b23b3b;
+      font-weight: 500;
+      font-size: 1.125rem;
+      transition: opacity 0.2s;
+    }
+    .nav-link:hover {
+      opacity: 0.8;
+    }
+
+    /* Hero Banner Placeholder */
+    .hero-banner {
+      background-color: #dcdcdc;
+      border-radius: 28px;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* Card Box Shadow & Rounded Border */
+    .product-card {
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      padding: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Card Image Container */
+    .card-img-wrapper {
+      width: 100%;
+      height: 110px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #f3f4f6;
+    }
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #f8f8f8;
+      border-top: 1px solid #efefef;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- Main Content Wrapper -->
+  <div class="max-w-6xl mx-auto px-4 py-6 w-full">
+
+
+    <!-- Header Section -->
+    <header class="flex items-center space-x-6 mb-8">
+      <!-- Circular Logo -->
+
+    <img src="../images/image.png" alt="Logo" width="60" height="60" class="logo-circle">
+      <!-- Pill Nav Bar -->
+      <nav class="nav-container flex-1 py-3 px-8 flex items-center space-x-12">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Products</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+    </header>
+    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="prev">
+        <span class="carousel-icon-prev" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="next">
+        <span class="carousel-icon-next" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    <!-- Main Hero Banner Container -->
+    <section class="mb-12">
+      <div class="hero-banner"></div>
+    </section>
+
+    <!-- Product Grid Section (3 Rows x 6 Columns) -->
+    <main class="space-y-6 mb-16">
+
+      <!-- ROW 1 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Card 1: Laptops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Laptops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Ultralight notebooks, gaming laptops, and everyday portables from top brands.</p>
+        </div>
+
+        <!-- Card 2: Accessories -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Accessories">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Accessories</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Keyboards, mice, bags, and essentials to upgrade your setup and workflow.</p>
+        </div>
+
+        <!-- Card 3: Desktops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=400&q=80" alt="Desktops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Desktops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">All-in-ones, gaming towers, and compact PCs built for performance and value.</p>
+        </div>
+
+        <!-- Card 4: Monitors -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400&q=80" alt="Monitors">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Monitors</h3>
+          <p class="text-[11px] leading-tight text-gray-500">4K displays, gaming panels, and productivity screens with crisp color and fast response.</p>
+        </div>
+
+        <!-- Card 5: Components -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80" alt="Components">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Components</h3>
+          <p class="text-[11px] leading-tight text-gray-500">CPUs, GPUs, RAM, and storage to upgrade, repair, or build your next PC.</p>
+        </div>
+
+        <!-- Card 6: Networking -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400&q=80" alt="Networking">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Networking</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Routers, mesh Wi-Fi, and adapters for reliable connections.</p>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Card 1: Laptops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Laptops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Ultralight notebooks, gaming laptops, and everyday portables from top brands.</p>
+        </div>
+
+        <!-- Card 2: Accessories -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Accessories">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Accessories</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Keyboards, mice, bags, and essentials to upgrade your setup and workflow.</p>
+        </div>
+
+        <!-- Card 3: Desktops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=400&q=80" alt="Desktops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Desktops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">All-in-ones, gaming towers, and compact PCs built for performance and value.</p>
+        </div>
+
+        <!-- Card 4: Monitors -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400&q=80" alt="Monitors">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Monitors</h3>
+          <p class="text-[11px] leading-tight text-gray-500">4K displays, gaming panels, and productivity screens with crisp color and fast response.</p>
+        </div>
+
+        <!-- Card 5: Components -->
+        <div class="product-card">
+<div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80" alt="Components">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Components</h3>
+          <p class="text-[11px] leading-tight text-gray-500">CPUs, GPUs, RAM, and storage to upgrade, repair, or build your next PC.</p>
+        </div>
+
+        <!-- Card 6: Networking -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400&q=80" alt="Networking">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Networking</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Routers, mesh Wi-Fi, and adapters for reliable connections.</p>
+        </div>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Card 1: Laptops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Laptops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Ultralight notebooks, gaming laptops, and everyday portables from top brands.</p>
+        </div>
+
+        <!-- Card 2: Accessories -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Accessories">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Accessories</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Keyboards, mice, bags, and essentials to upgrade your setup and workflow.</p>
+        </div>
+
+        <!-- Card 3: Desktops -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=400&q=80" alt="Desktops">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Desktops</h3>
+          <p class="text-[11px] leading-tight text-gray-500">All-in-ones, gaming towers, and compact PCs built for performance and value.</p>
+        </div>
+
+        <!-- Card 4: Monitors -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400&q=80" alt="Monitors">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Monitors</h3>
+          <p class="text-[11px] leading-tight text-gray-500">4K displays, gaming panels, and productivity screens with crisp color and fast response.</p>
+        </div>
+
+        <!-- Card 5: Components -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80" alt="Components">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Components</h3>
+          <p class="text-[11px] leading-tight text-gray-500">CPUs, GPUs, RAM, and storage to upgrade, repair, or build your next PC.</p>
+        </div>
+
+        <!-- Card 6: Networking -->
+        <div class="product-card">
+          <div class="card-img-wrapper mb-3">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400&q=80" alt="Networking">
+          </div>
+          <h3 class="font-bold text-sm text-gray-900 mb-1">Networking</h3>
+          <p class="text-[11px] leading-tight text-gray-500">Routers, mesh Wi-Fi, and adapters for reliable connections.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+<footer class="w-full pt-10 pb-6 text-xs text-gray-500">
+    <div class="max-w-6xl mx-auto px-4">
+      
+      <!-- Top Section -->
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-8 pb-10">
+        
+        <!-- Brand Info Column -->
+        <div class="md:col-span-2 space-y-3 pr-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 rounded-md bg-black text-white font-bold flex items-center justify-center text-xs">
+              A
+            </div>
+            <span class="font-bold text-sm text-gray-900">Lucas  Studio</span>
+          </div>
+          <p class="text-[10px] text-gray-400 font-medium">Built for clarity, speed, and long-term growth.</p>
+          <p class="text-[11px] text-gray-500 leading-relaxed pt-1">
+            A modern digital workspace for teams that need polished product experiences, clear information architecture, and a foundation that scales with confidence.
+          </p>
+          <div class="pt-2 flex items-center space-x-2">
+            <span class="inline-block bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-[10px] border border-gray-200">
+              Support 24/7
+            </span>
+            <span class="text-[10px] text-gray-400">Updated weekly</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: PRODUCT -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-[10px] text-gray-400 uppercase tracking-wider">Product</h4>
+          <ul class="space-y-1.5 text-gray-600 font-medium text-[11px]">
+            <li><a href="#" class="hover:underline">Features</a></li>
+            <li><a href="#" class="hover:underline">Templates</a></li>
+            <li><a href="#" class="hover:underline">Integrations</a></li>
+            <li><a href="#" class="hover:underline">Security</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: COMPANY -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-[10px] text-gray-400 uppercase tracking-wider">Company</h4>
+          <ul class="space-y-1.5 text-gray-600 font-medium text-[11px]">
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Press</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: RESOURCES & LEGAL -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-[10px] text-gray-400 uppercase tracking-wider">Resources</h4>
+          <ul class="space-y-1.5 text-gray-600 font-medium text-[11px] mb-4">
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">Guides</a></li>
+            <li><a href="#" class="hover:underline">API Docs</a></li>
+            <li><a href="#" class="hover:underline">Status</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 4: NEWSLETTER & LEGAL -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-[10px] text-gray-400 uppercase tracking-wider">Legal</h4>
+          <ul class="space-y-1.5 text-gray-600 font-medium text-[11px]">
+            <li><a href="#" class="hover:underline">Privacy</a></li>
+            <li><a href="#" class="hover:underline">Terms</a></li>
+            <li><a href="#" class="hover:underline">Cookies</a></li>
+            <li><a href="#" class="hover:underline">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Newsletter Box (Floating style bottom right on desktop) -->
+      <div class="border-t border-gray-100 pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-gray-400">
+        <p>© 2026  Studio. All rights reserved.</p>
+
+        <!-- Newsletter Input Box -->
+        <div class="my-4 md:my-0 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
+          <div class="text-[10px] text-gray-500 max-w-xs leading-tight mr-2">
+  <!-- Footer Section -->
+   Get product updates, launch notes, and design insights delivered to your inbox.
+          </div>
+          <div class="flex items-center bg-white border border-gray-200 rounded-lg p-1 shadow-sm">
+            <input type="email" placeholder="Email address" class="px-2 py-1 text-xs outline-none text-gray-700 w-36">
+            <button class="bg-black text-white px-3 py-1 rounded text-xs font-medium hover:bg-gray-800 transition">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-3 text-gray-400">
+          <span>Follow us</span>
+          <a href="#" class="hover:text-gray-600">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+          <a href="#" class="hover:text-gray-600">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="hover:text-gray-600">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="hover:text-gray-600">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
